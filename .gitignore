@@ -16,7 +16,6 @@ MANIFEST
 
 # Custom
 /*.json
-/*.txt
 cache/*
 !cache/.keep
 vsac_wrangler/data/cache/*
@@ -26,3 +25,7 @@ vsac_wrangler/data/cache/*
 input/VSAC Values Sets 17Jan22
 junk_was_value_set_vsac_to_json
 old_bash_scripts
+
+# Special cases
+# remote: error: File data/icd10cm/dione/icd10cm.owl is 148.15 MB; this exceeds GitHub's file size limit of 100.00 MB
+data/icd10cm/dione/icd10cm.owl
