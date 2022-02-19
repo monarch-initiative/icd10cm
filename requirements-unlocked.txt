@@ -1,4 +1,5 @@
-ontobio
+jupyter
+# ontobio
 pandas
-pronto
+# pronto
 rdflib

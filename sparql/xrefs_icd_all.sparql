@@ -1,0 +1,17 @@
+# Regexp variations
+# Prefix:     ICD[-]\{0,1\}[0-9].[-]\{0,1\}[a-zA-Z0-9\-_\!@#$%^&*()+=/\\\`?\"\';\{\}|<>.,~]*:
+# Code:     [a-zA-Z0-9.]*
+# All:
+# Syntax error:     ICD[-]\{0,1\}[0-9].[-]\{0,1\}[a-zA-Z0-9\-_\!@#$%^&*()+=/\\\`?\"\';\{\}|<>.,~]*:[a-zA-Z0-9.]*
+# Ok:     regex(str(?xref), "^ICD[-]{0,1}[0-9]{0,2}[-]{0,1}[a-zA-Z0-9_-`~!@#$%^&*]*:[a-zA-Z0-9.]*")
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?xref WHERE  {
+  ?cls a owl:Class ;
+     oboInOwl:hasDbXref ?xref .
+  FILTER NOT EXISTS { ?cls owl:deprecated "true"^^xsd:boolean . }
+  FILTER(!isBlank(?cls))
+  FILTER(regex(str(?xref), "^ICD[-]{0,1}[0-9]{0,2}[-]{0,1}[a-zA-Z0-9_-`~!@#$%^&*]*:[a-zA-Z0-9.]*"))
+}

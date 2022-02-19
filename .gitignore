@@ -14,10 +14,19 @@ ignored/
 tags
 MANIFEST
 
+# Jupyter
+.ipynb_checkpoints/
+
 # Custom
 /*.json
+output/
+!output/.keep
 cache/*
 !cache/.keep
+!cache/robot/
+cache/robot/*
+!cache/robot/.keep
+notebooks/cache/
 vsac_wrangler/data/cache/*
 !vsac_wrangler/data/cache/.keep
 /env/*
@@ -27,5 +36,6 @@ junk_was_value_set_vsac_to_json
 old_bash_scripts
 
 # Special cases
-# remote: error: File data/icd10cm/dione/icd10cm.owl is 148.15 MB; this exceeds GitHub's file size limit of 100.00 MB
+# Addresses: "remote: error: <FILENAME> is <MB> MB; this exceeds GitHub's file size limit of 100.00 MB"
 data/icd10cm/dione/icd10cm.owl
+data/mondo/source/mondo.owl
