@@ -123,10 +123,10 @@ def sparql_file_query__via_robot(path_in_data_dir, query_filename, use_cache=USE
     return df
 
 
-def icd_xrefs_mondo__get() -> pd.DataFrame:
+def icd_xrefs_mondo__get(v=2) -> pd.DataFrame:
     """Get a dataframe of ICD cross-references from Mondo."""
     df = sparql_file_query__via_robot(
-        'mondo/source/mondo-edit.obo', 'xrefs_icd_all.sparql')
+        'mondo/source/mondo-edit.obo', f'xrefs_icd_all{str(v)}.sparql')
     df = df.rename(columns={'xref': 'codes'})
     return df
 
