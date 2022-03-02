@@ -3,7 +3,11 @@ Mondo data ingest pipeline and analyses for ICD10CM.
 
 ## Running analyses
 ### Running via Python
-Run `python3 scripts/<SCRIPT_NAME>.py`
+#### Syntax
+`python3 scripts/<SCRIPT_NAME>.py`
+
+#### Example
+`python3 scripts/check_valid_codes.py`
 
 ### Running via `robot`
 #### Running a new analysis
