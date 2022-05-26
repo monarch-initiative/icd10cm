@@ -1,6 +1,9 @@
 # ICD10CM
 Mondo data ingest pipeline and analyses for ICD10CM.
 
+## Running ingest
+(TODO)
+
 ## Running analyses
 ### Running via Python
 #### Syntax
